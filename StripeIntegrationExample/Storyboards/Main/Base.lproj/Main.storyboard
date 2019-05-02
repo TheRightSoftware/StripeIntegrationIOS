@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meq-Ug-noW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stripe Integration-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StripeIntegrationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Emw-6c-LWW">
+                                <rect key="frame" x="107" y="304" width="200" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej1-Ty-yR1">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="84"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Standard Integration">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="nxh-xr-xMu" kind="show" id="2ZF-ch-Sk0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUs-27-bLW">
+                                        <rect key="frame" x="0.0" y="116" width="200" height="84"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Custom Integration">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OV9-Va-LCm" kind="show" id="DBg-DD-3wu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="K8x-Sx-pF5"/>
+                                    <constraint firstAttribute="width" constant="200" id="kiV-Ck-Iy2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Emw-6c-LWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dxl-rb-GBe"/>
+                            <constraint firstItem="Emw-6c-LWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUJ-dq-GFk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stripe Integration" id="3Np-cP-sUQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="-565"/>
+        </scene>
+        <!--Custom Integration-->
+        <scene sceneID="fKu-lb-Puw">
+            <objects>
+                <viewController title="Custom Integration" id="OV9-Va-LCm" customClass="CustomIntegrationViewController" customModule="StripeIntegrationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pfr-wW-wJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit_card" translatesAutoresizingMaskIntoConstraints="NO" id="dS4-5h-LWp">
+                                <rect key="frame" x="16" y="16" width="382" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="1j5-ag-8Pa"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kot-l4-pR1">
+                                <rect key="frame" x="20" y="271" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0l3-jV-hWS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OV9-Va-LCm" id="yO5-ES-9Fm"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="S0x-dX-0AL">
+                                <rect key="frame" x="20" y="327" width="374" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiry (MM/YY)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU1-bn-y6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="OV9-Va-LCm" id="ZwW-Hu-yEX"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mll-p3-TFB">
+                                        <rect key="frame" x="212" y="0.0" width="162" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="OV9-Va-LCm" id="v7K-2K-vsp"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wxd-9w-BlC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NO6-sr-1Cc">
+                                <rect key="frame" x="20" y="387" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5W0-5e-0RQ"/>
+                                </constraints>
+                                <state key="normal" title="Make Payment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="makePaymentButtonPressed:" destination="OV9-Va-LCm" eventType="touchUpInside" id="t30-Xr-aG1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="S0x-dX-0AL" firstAttribute="leading" secondItem="coa-zd-V8X" secondAttribute="leading" constant="20" id="2Bl-6w-jYs"/>
+                            <constraint firstItem="NO6-sr-1Cc" firstAttribute="leading" secondItem="coa-zd-V8X" secondAttribute="leading" constant="20" id="3P1-Rq-Y4v"/>
+                            <constraint firstItem="coa-zd-V8X" firstAttribute="trailing" secondItem="dS4-5h-LWp" secondAttribute="trailing" constant="16" id="6iA-ws-af3"/>
+                            <constraint firstItem="dS4-5h-LWp" firstAttribute="top" secondItem="coa-zd-V8X" secondAttribute="top" constant="16" id="82i-tb-5Ru"/>
+                            <constraint firstItem="coa-zd-V8X" firstAttribute="trailing" secondItem="kot-l4-pR1" secondAttribute="trailing" constant="20" id="DlV-h0-9vr"/>
+                            <constraint firstItem="dS4-5h-LWp" firstAttribute="leading" secondItem="coa-zd-V8X" secondAttribute="leading" constant="16" id="LPE-yd-V8d"/>
+                            <constraint firstItem="NO6-sr-1Cc" firstAttribute="top" secondItem="S0x-dX-0AL" secondAttribute="bottom" constant="20" id="Mdx-0G-wIs"/>
+                            <constraint firstItem="kot-l4-pR1" firstAttribute="leading" secondItem="coa-zd-V8X" secondAttribute="leading" constant="20" id="RYy-9G-NoI"/>
+                            <constraint firstItem="S0x-dX-0AL" firstAttribute="top" secondItem="kot-l4-pR1" secondAttribute="bottom" constant="16" id="abP-Iz-wbG"/>
+                            <constraint firstItem="coa-zd-V8X" firstAttribute="trailing" secondItem="NO6-sr-1Cc" secondAttribute="trailing" constant="20" id="bk6-gp-3jj"/>
+                            <constraint firstItem="coa-zd-V8X" firstAttribute="trailing" secondItem="S0x-dX-0AL" secondAttribute="trailing" constant="20" id="cGZ-dL-6Ig"/>
+                            <constraint firstItem="kot-l4-pR1" firstAttribute="top" secondItem="dS4-5h-LWp" secondAttribute="bottom" constant="20" id="vm2-YX-43D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="coa-zd-V8X"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lU3-1r-ok4" appends="YES" id="Bp1-2r-1QP"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cardNumberField" destination="kot-l4-pR1" id="diC-4p-Y4Y"/>
+                        <outlet property="cvvTextField" destination="mll-p3-TFB" id="anX-OJ-Fhz"/>
+                        <outlet property="expiryTextField" destination="dU1-bn-y6g" id="f8d-dg-EMM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqA-DG-Zei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lU3-1r-ok4">
+                    <connections>
+                        <action selector="tapGestureInvoked:" destination="OV9-Va-LCm" id="xOz-5f-glm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2719" y="-1"/>
+        </scene>
+        <!--Standard Integration-->
+        <scene sceneID="xeP-Y8-Ouh">
+            <objects>
+                <viewController title="Standard Integration" id="nxh-xr-xMu" customClass="StanadardIntegrationViewController" customModule="StripeIntegrationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAJ-Ry-fuI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmd-Zu-ZCK">
+                                <rect key="frame" x="147" y="384" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Mnv-qe-fVn"/>
+                                    <constraint firstAttribute="height" constant="40" id="grG-PJ-eCg"/>
+                                </constraints>
+                                <state key="normal" title="Setup Card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setupCardButtonPressed:" destination="nxh-xr-xMu" eventType="touchUpInside" id="Qjl-y8-WKo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tmd-Zu-ZCK" firstAttribute="centerX" secondItem="DAJ-Ry-fuI" secondAttribute="centerX" id="EK7-hB-J8R"/>
+                            <constraint firstItem="Tmd-Zu-ZCK" firstAttribute="centerY" secondItem="DAJ-Ry-fuI" secondAttribute="centerY" id="MhG-Uy-hhi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I8q-Lf-EEK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0R-Oj-Rg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2719" y="-1002"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bNh-I2-MTl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="meq-Ug-noW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="B5K-PH-Dny">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.23529411759999999" green="0.35294117650000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VwL-9f-FiY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTg-fx-ewb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.84057971014494" y="-564.50892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="credit_card" width="1024" height="641"/>
+    </resources>
+</document>

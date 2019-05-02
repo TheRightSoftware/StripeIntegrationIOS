@@ -1,0 +1,6 @@
+framework module Pods_StripeIntegrationExample {
+  umbrella header "Pods-StripeIntegrationExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
