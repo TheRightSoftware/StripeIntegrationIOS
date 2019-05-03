@@ -1,0 +1,3 @@
+# StripeIntegrationIOS
+A project requires a some method for monetisation for the user for him to cover the costs. Monetisation can come in in-app purchases, ads or premium content. Handling payments can be difficult but thankfully this is where payment gateways step forward with solution. A payment gateway is a merchant service provided by a service provider that authorises credit card or direct payments processing for e-businesses. There are many gateways available but Stripe payment gateway is one of the most powerful and most commonly used.  In this tutorial, we are going to cover the stripe payment integration in a test iOS app using Swift. 
+You can find the full tutorial over here: https://therightsw.com/stripe-payment-integration-ios-swift-5
